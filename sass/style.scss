@@ -9,12 +9,16 @@ body { font-family: sans-serif; }
     height: 50vh;
     min-height: 250px;
     text-align: center;
-    img {
-      background-size: cover;
-    }
+    background-repeat: no-repeat;
+    background-size: cover;
     .container {
       max-width: 1200px;
       margin: 0 auto;
+      color: rgb(54, 53, 53);
+      font-size: 2em;
+      position: relative;
+      top: 50%;
+      
     }
   }
 }

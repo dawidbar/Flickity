@@ -15,15 +15,17 @@ body {
   height: 50vh;
   min-height: 250px;
   text-align: center;
-}
-
-.main-carousel .carousel-cell img {
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
 .main-carousel .carousel-cell .container {
   max-width: 1200px;
   margin: 0 auto;
+  color: #363535;
+  font-size: 2em;
+  position: relative;
+  top: 50%;
 }
 
 .flickity-page-dots {
