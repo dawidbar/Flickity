@@ -33,8 +33,6 @@ body { font-family: sans-serif; }
 
 .button {
   font-size: 22px;
-}
-
-.button-group {
-  margin-bottom: 20px;
+  position: absolute;
+  z-index: 999;
 }

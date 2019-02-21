@@ -2,15 +2,9 @@ var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity(elem, {
     // options
     cellAlign: 'left',
-    contain: true
+    contain: true,
+    hash: true
 });
-
-// element argument can be a selector string
-//   for an individual element
-var flkty = new Flickity('.main-carousel', {
-    hash: true,
-});
-
 
 var progressBar = document.querySelector('.progress-bar')
 
@@ -20,9 +14,9 @@ flkty.on('scroll', function (progress) {
 });
 
 
-var buttonGroup = document.querySelector('.button-group');
+var button = document.querySelector('.button');
 
-buttonGroup.addEventListener('click', function (event) {
+button.addEventListener('click', function (event) {
     // filter for button clicks
     if (!matchesSelector(event.target, '.button')) {
         return;
@@ -30,3 +24,5 @@ buttonGroup.addEventListener('click', function (event) {
     var selector = event.target.getAttribute('data-selector');
     flkty.selectCell(selector);
 });
+
+console.log(flkty);
