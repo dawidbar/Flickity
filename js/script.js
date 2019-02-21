@@ -9,7 +9,7 @@ for(var i = 0; i < items.length; i++){
     listItems += Mustache.render(templateItem, items[i]);
 }
 var main = document.querySelector('.main-carousel');
-main.innerHTML = items;
+main.innerHTML = listItems;
 })(); 
 
 var elem = document.querySelector('.main-carousel');
