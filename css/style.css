@@ -24,8 +24,6 @@ body {
   margin: 0 auto;
   color: #363535;
   font-size: 2em;
-  position: relative;
-  top: 50%;
 }
 
 .flickity-page-dots {

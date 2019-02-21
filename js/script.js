@@ -5,12 +5,11 @@
     Mustache.parse(templateItem);
     var listItems = '';
     for (var i = 0; i < items.length; i++) {
-        console.log(items);
         listItems += Mustache.render(templateItem, items[i]);
     }
     var main = document.querySelector('.main-carousel');
     main.innerHTML = listItems;
-})();
+
 
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity(elem, {
@@ -38,5 +37,4 @@ button.addEventListener('click', function (event) {
     var selector = event.target.getAttribute('data-selector');
     flkty.selectCell(selector);
 });
-
-console.log(flkty);
+})();
