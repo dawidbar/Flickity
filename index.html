@@ -13,46 +13,64 @@
 
 <body>
     <button class="button" data-selector=".cell1">Reset</button>
-    <div class="main-carousel">
-        <div class="carousel-cell cell1" id="carousel-cell1" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg)">
-            <div class="container">
-                <p>Przykładowy tekst</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell2" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg)">
-            <div class="container">
-                <p>Przykładowy tekst</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell3" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg)">
-            <div class="container">
-                <p>Przykładowy tekst</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell4" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg)">
-            <div class="container">
-                <p>Przykładowy tekst</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell5" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg)">
-            <div class="container">
-                <p>Przykładowy tekst</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell6" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg)">
-            <div class="container">
-                <p>Przykładowy tekst</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell7" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg)">
-            <div class="container">
-                <p>Przykładowy tekst</p>
-            </div>
-        </div>
+    <div class="main-carousel" id="carousel">
     </div>
+    
+    <script id="template-product-item" type="x-tmpl-mustache">
+            <div class="carousel-cell" id="{{id}}" style="background-image: url({{image}})"><div class="container"><p>{{title}}</p><br>{{{desctiption}}}</div></div>
+        </script>
+    
+        <script>
+                var items = [
+                    {
+                        id: 'carousel-cell1',
+                        image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg',
+                        title: 'Przykładowy tekst',
+                        desctiption:  '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+                    },
+                    {
+                        id: 'carousel-cell2',
+                        image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg',
+                        title: 'Przykładowy tekst',
+                        desctiption:  '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+                    },
+                    {
+                        id: 'carousel-cell3',
+                        image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg',
+                        title: 'Przykładowy tekst',
+                        desctiption: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+                    },
+                    {
+                        id: 'carousel-cell4',
+                        image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg',
+                        title: 'Przykładowy tekst',
+                        desctiption: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+                    },
+                    {
+                        id: 'carousel-cell5',
+                        image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg',
+                        title: 'Przykładowy tekst',
+                        desctiption: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+                    },
+                    {
+                        id: 'carousel-cell6',
+                        image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg',
+                        title: 'Przykładowy tekst',
+                        desctiption: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+                    },
+                    {
+                        id: 'carousel-cell7',
+                        image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg',
+                        title: 'Przykładowy tekst',
+                        desctiption: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+                    },
+                ];
+                </script>
+
     <div class="progress-bar"></div>
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="vendor/hash.js"></script>
+    <script src="vendor/mustache.js"></script>
     <script src="js/script.js"></script>
 </body>
 

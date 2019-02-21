@@ -1,3 +1,17 @@
+'use strict';
+(function(){ 
+
+var templateItem = document.getElementById('template-product-item').innerHTML;
+Mustache.parse(templateItem);
+var listItems = '';
+for(var i = 0; i < items.length; i++){
+    console.log(items);
+    listItems += Mustache.render(templateItem, items[i]);
+}
+var main = document.querySelector('.main-carousel');
+main.innerHTML = items;
+})(); 
+
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity(elem, {
     // options
