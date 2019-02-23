@@ -37,4 +37,20 @@
         var selector = event.target.getAttribute('data-selector');
         flkty.selectCell(selector);
     });
+	
+    window.initMap = function() {
+        var tbg = {lat: 50.574646, lng: 21.673120};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: tbg 
+        });
+        for (var i = 0; i < items.length; i++) {
+            var cords = items[i].coords;
+            var marker = new google.maps.Marker({
+                position: cords,
+                map: map
+            });
+        }
+    }
 })();
+
