@@ -29,13 +29,8 @@
 
     var button = document.querySelector('.button');
 
-    button.addEventListener('click', function (event) {
-        // filter for button clicks
-        if (!matchesSelector(event.target, '.button')) {
-            return;
-        }
-        var selector = event.target.getAttribute('data-selector');
-        flkty.selectCell(selector);
+    button.addEventListener('click', function(){
+        flkty.selectCell('#carousel-cell1');
     });
 	
     window.initMap = function() {
@@ -50,7 +45,11 @@
                 position: cords,
                 map: map
             });
+            var id = items[i].id;
+            marker.addListener('click', function(){
+                flkty.selectCell(id);
+                console.log(flkty)
+            });
         }
     }
 })();
-
