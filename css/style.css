@@ -43,4 +43,9 @@ body {
   position: absolute;
   z-index: 999;
 }
+
+#map {
+  height: 200px;
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */
