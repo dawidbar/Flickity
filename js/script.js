@@ -27,15 +27,10 @@
     });
 
 
-    var button = document.querySelector('.button');
+    var reset = document.querySelector('.reset');
 
-    button.addEventListener('click', function (event) {
-        // filter for button clicks
-        if (!matchesSelector(event.target, '.button')) {
-            return;
-        }
-        var selector = event.target.getAttribute('data-selector');
-        flkty.selectCell(selector);
+    reset.addEventListener('click', function(){
+        flkty.select(0);
     });
 	
     window.initMap = function() {
@@ -44,13 +39,18 @@
             zoom: 10,
             center: tbg 
         });
-        for (var i = 0; i < items.length; i++) {
+        for (let i = 0; i < items.length; i++) {
             var cords = items[i].coords;
             var marker = new google.maps.Marker({
                 position: cords,
                 map: map
             });
+            marker.addListener('click', function(){
+                flkty.select(i);
+            });
+            flkty.on( 'change', function(index) {
+                map.panTo(items[index].coords);
+            });
         }
     }
 })();
-
